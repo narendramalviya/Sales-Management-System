@@ -2,12 +2,12 @@ import React, { Component } from "react";
 
 class Create_account extends Component {
 	state = {
-		accountNo: "1",
-		name: "Narendra",
-		lastName: "Malviya",
+		accountNo: "10",
+		name: "nk",
+		lastName: "malviya",
 		phone: "7742401557",
 		address: "pali rajasthan",
-		balance: "0",
+		balance: "15000"
 	};
 
 	onChangeHandler = (event) => {
@@ -15,19 +15,22 @@ class Create_account extends Component {
 	};
 	submitHandler = () => {
 		console.log("clicked");
-		// fetch(
-		// 	"https://inventory-management-9f8d7.firebaseio.com/accounts.json",
-		// 	{
-		// 		method: "post",
-		// 		headers: {
-		// 			"Content-Type": "application/json",
-		// 		},
-		// 		body: JSON.stringify(this.state),
-		// 	}
-		// )
-		// 	.then((response) => console.log(response))
-		// 	.catch((err) => console.log(err));
-		// .then(result=> alert(result)).catch((err)=> console.log(err));
+		fetch(
+			"http://localhost:7000/api/create-account",
+			{
+				method: "post",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(this.state),
+			}
+		)
+			.then((response) => response.json())
+			.then(result=> console.log(result)).catch((err)=> console.log(err));
+	
+		
+
+
 	};
 	render() {
 		return (
