@@ -2,12 +2,15 @@ import React, { Component } from "react";
 
 class Create_account extends Component {
 	state = {
-		accountNo: "10",
-		name: "nk",
-		lastName: "malviya",
-		phone: "7742401557",
-		address: "pali rajasthan",
-		balance: "15000"
+		user: {
+			accountNo: "10",
+			userId:"",
+			name: "nk",
+			lastName: "malviya",
+			phone: "7742401557",
+			address: "pali rajasthan",
+			balance: "15000",
+		},
 	};
 
 	onChangeHandler = (event) => {
@@ -15,22 +18,17 @@ class Create_account extends Component {
 	};
 	submitHandler = () => {
 		console.log("clicked");
-		fetch(
-			"http://localhost:7000/api/create-account",
-			{
-				method: "post",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(this.state),
-			}
-		)
-			.then((response) => response.json())
-			.then(result=> console.log(result)).catch((err)=> console.log(err));
-	
-		
-
-
+		// TODO: 
+		// fetch("http://localhost:7000/api/create-account", {
+		// 	method: "post",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(this.state),
+		// })
+		// 	.then((response) => response.json())
+		// 	.then((result) => console.log(result))
+		// 	.catch((err) => console.log(err));
 	};
 	render() {
 		return (

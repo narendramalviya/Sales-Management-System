@@ -11,9 +11,19 @@ class User extends Component {
 		},
 	};
 	render() {
+		const { userId, name, lastName, phone, address } = this.props.user;
 		return (
 			<div>
-				<h1 className="">User Details</h1>
+				<div className="card">
+					<div className="card-header">User</div>
+					<div className="card-body">
+						<p>User Id :{userId}</p>
+						<p>Name :{name}</p>
+						<p>Last Name :{lastName}</p>
+						<p>Phone :{phone}</p>
+						<p>Address :{address}</p>
+					</div>
+				</div>
 			</div>
 		);
 	}

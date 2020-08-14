@@ -1,35 +1,43 @@
 import React, { Component } from "react";
 
-class AllUsers extends Component {
+class AllAccounts extends Component {
 	state = {
-		users: [
+		accounts: [
 			{
 				userId: "1",
+				accountNo:"2",
 				name: "nk",
 				lastName: "malviya",
 				phone: "7742401557",
 				address: "pali rajasthan",
+				balance:'50000'
 			},
 			{
 				userId: "2",
+				accountNo:"3",
 				name: "Shiv ",
 				lastName: "malviya",
 				phone: "9928695184",
 				address: "pali rajasthan",
+				balance:'5000000'
 			},
 			{
 				userId: "3",
+				accountNo:"4",
 				name: "sunil",
 				lastName: "malviya",
 				phone: "988909938",
 				address: "Gundoj pali rajasthan",
+				balance:'450000'
 			},
 			{
 				userId: "4",
+				accountNo:"5",
 				name: "kailash",
 				lastName: "malviya",
 				phone: "797837473",
 				address: "pali rajasthan",
+				balance:'800000'
 			},
 		],
 	};
@@ -37,11 +45,11 @@ class AllUsers extends Component {
 		// TODO: fetch all users and set in the state
 	}
 	render() {
-		let allUsers = "";
-		if (this.state.users !== null) {
-			const users = this.state.users			
-			allUsers=users.map((user, index) => {
-				const  {userId, name, lastName, phone, address } = user;
+		let allAccounts = "";
+		if (this.state.accounts !== null) {
+			const users = this.state.accounts			
+			allAccounts=users.map((account, index) => {
+				const  {userId, name, lastName, phone, address,balance } = account;
 				return (
 					<tr key={index}>
 						<td>{index + 1}</td>
@@ -50,15 +58,14 @@ class AllUsers extends Component {
 						<td>{lastName}</td>
 						<td>{phone}</td>
 						<td>{address}</td>
+						<td>{balance}</td>
 					</tr>
-
 				);
 			});
-		} else allUsers = <h1>Loading ...</h1>;
-		console.log();
+		} else allAccounts = <h1>Loading ...</h1>;
 		return (
 			<div className="container">
-				<h1>All users</h1>
+				<h1>All Accounts</h1>
 				<table className="table table-hover">
 					<thead>
 						<tr>
@@ -68,12 +75,13 @@ class AllUsers extends Component {
 							<th>LastName</th>
 							<th>Phone </th>
 							<th>Address </th>
+							<th>Balance </th>
 						</tr>
 					</thead>
-					<tbody>{allUsers}</tbody>
+					<tbody>{allAccounts}</tbody>
 				</table>
 			</div>
 		);
 	}
 }
-export default AllUsers;
+export default AllAccounts;
