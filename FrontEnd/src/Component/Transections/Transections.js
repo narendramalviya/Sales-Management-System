@@ -14,12 +14,13 @@ class Transection extends Component {
 		return (
 		
 			<div className="container">
-				<div className="jumbotron row">
-					<div className="col-3">
+				<div className="jumbotron row border border-success rounded">
+					<div className="col-3 border border-success rounded">
 						<ul>
 							<li>
 								<Link
 									to={`${this.props.match.path}/account_transection`}
+									className="btn btn-success m-2"
 								>
 									Account Transection
 								</Link>
@@ -27,13 +28,14 @@ class Transection extends Component {
 							<li>
 								<Link
 									to={`${this.props.match.path}/account_transection_summary`}
+									className="btn btn-success m-2"
 								>
 									Account Transection Summary
 								</Link>
 							</li>
 						</ul>
 					</div>
-					<div className="col-9">
+					<div className="col-9 border border-success rounded">
 						<Switch>
 							<Route
 								path={`${this.props.match.path}/account_transection`}

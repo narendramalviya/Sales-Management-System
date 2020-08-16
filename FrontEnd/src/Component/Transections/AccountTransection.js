@@ -19,10 +19,10 @@ class AccountTransection extends Component {
 	};
 	render() {
 		return (
-			<div className="jumbotron">
+			<div className="border border-success rounded">
 				<h1>Transection</h1>
 				<GetAccount/>
-				<div className="form-group">
+				<div className="form-group m-2">
 					<label htmlFor="accountNo">Account No.</label>
 					<input
 						type="number"

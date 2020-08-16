@@ -49,11 +49,12 @@ class AllAccounts extends Component {
 		if (this.state.accounts !== null) {
 			const users = this.state.accounts			
 			allAccounts=users.map((account, index) => {
-				const  {userId, name, lastName, phone, address,balance } = account;
+				const  {userId, name, lastName, phone, address,balance,accountNo } = account;
 				return (
 					<tr key={index}>
 						<td>{index + 1}</td>
 						<td>{userId}</td>
+						<td>{accountNo}</td>
 						<td>{name}</td>
 						<td>{lastName}</td>
 						<td>{phone}</td>
@@ -70,7 +71,8 @@ class AllAccounts extends Component {
 					<thead>
 						<tr>
 							<th>SR.</th>
-							<th>UserId</th>
+							<th>User Id</th>
+							<th>Account No.</th>
 							<th>Name</th>
 							<th>LastName</th>
 							<th>Phone </th>

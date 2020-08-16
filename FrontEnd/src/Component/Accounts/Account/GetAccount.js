@@ -25,7 +25,7 @@ class GetAccount extends Component {
     }
 	render() {		
 		return (
-			<div>
+			<div className="border border-success rounded">
 				<h1>Get Account By Id</h1>
                     <div className="form-group m-2">
 						<label htmlFor="userId" >User Id:</label>
@@ -39,7 +39,7 @@ class GetAccount extends Component {
 							Submit
 						</button>
 					</div>
-        {this.state.showUserDetail ? <User user={this.state.user} /> <p>{this.state.}</p> :null }
+        {this.state.showUserDetail ? <div> <User user={this.state.user} /> {`Balance :${this.state.userAccountDetail.balance}`}</div> :null }
 			</div>
 		);
 	}

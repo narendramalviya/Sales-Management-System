@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 class Header extends Component {
 	render() {
 		return (
-			<div>
+			<div className="bg bg-success">
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<button
 						className="navbar-toggler"
@@ -29,6 +29,11 @@ class Header extends Component {
 								</NavLink>
 							</li>
 							<li className="nav-item">
+								<NavLink className="nav-link" to="/users">
+									Users
+								</NavLink>
+							</li>
+							<li className="nav-item">
 								<NavLink className="nav-link" to="/transection">
 									Transection
 								</NavLink>
@@ -39,8 +44,13 @@ class Header extends Component {
 								</NavLink>
 							</li>
 							<li className="nav-item">
-								<NavLink className="nav-link" to="/users">
-									Users
+								<NavLink className="nav-link" to="/sales">
+									Sales
+								</NavLink>
+							</li>
+							<li className="nav-item">
+								<NavLink className="nav-link" to="/stock">
+									Stock
 								</NavLink>
 							</li>
 						</ul>

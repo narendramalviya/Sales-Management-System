@@ -16,33 +16,33 @@ class Users extends Component {
 					<div className="col-3 border border-success rounded-sm">
 						<ul>
 							<li>
-								<Link to={`${currentPath}/create-user`}>
+								<Link to={`${currentPath}/create-user`} className="btn btn-success m-2">
 									Create New User
 								</Link>
 							</li>
 							<li>
-								<Link to={`${currentPath}/getUser`}>
+								<Link to={`${currentPath}/getUser`} className="btn btn-success m-2">
 									Get User By, User Id
 								</Link>
 							</li>
 							<li>
-								<Link to={`${currentPath}/getAll-users`}>
+								<Link to={`${currentPath}/getAll-users`} className="btn btn-success m-2">
 									Get All Users
 								</Link>
 							</li>
 							<li>
-								<Link to={`${currentPath}/update-user`}>
+								<Link to={`${currentPath}/update-user`} className="btn btn-success m-2">
 									Update User Details
 								</Link>
 							</li>
 							<li>
-								<Link to={`${currentPath}/delete-user`}>
+								<Link to={`${currentPath}/delete-user`} className="btn btn-success m-2">
 									Delete User
 								</Link>
 							</li>
 						</ul>
 					</div>
-					<div className="col-9 border border-success rounded-sm">
+					<div className="col-9 border border-success rounded-sm" >
 						<Switch>
 							<Route
 								path={`${currentPath}/create-user`}
