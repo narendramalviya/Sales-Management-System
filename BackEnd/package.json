@@ -7,13 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "Narendra Malviya",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
-    "mongoose": "^5.9.28"
+    "mongoose": "^5.10.0"
   }
 }

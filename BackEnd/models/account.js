@@ -1,27 +1,24 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema
-const account = new Schema({
+
+const ObjectId = mongoose.Types.ObjectId
+const AccountSchema =  mongoose.Schema({
     accountNo:{
         type:Number,
-        required:true
-    },
-    name:{
-        type:String,
-        required:true
-    },
-    lastName:String,
-    phone:{
-        type:String,
-        required:true
-    },
-    address:{
-        type:String,
-        required:true
+        require:true,
+        unique:true
     },
     balance:{
         type:Number,
-        required:true
-    }
+        default:0
+    },
+    user:{
+        type:ObjectId,
+        ref:'User',
+    },
+    accountStatement:[{
+        type:ObjectId,
+        ref:'AccountStatement'
+    }]
 });
 
-module.exports =  mongoose.model('account',account);
+module.exports = new mongoose.model('Account',AccountSchema);
